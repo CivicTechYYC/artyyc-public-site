@@ -1,0 +1,28 @@
+.header-logo {
+	height: 90px; 
+	margin: -10px;
+
+	&.hidden { display: none; }
+}
+
+.banner-logo {
+	width: 300px;
+	margin-left: -50px;
+	margin-top: -80px;
+}
+
+input.email{
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.email {
+	// line-height: 1.5em;
+	font-size: 35px;
+	margin-right: 20px;
+	&::placeholder {
+	  font-size: 30px;
+	}
+
+}

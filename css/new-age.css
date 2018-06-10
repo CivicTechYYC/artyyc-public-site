@@ -435,3 +435,33 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   font-size: 11px;
   padding: 15px 45px;
 }
+
+.header-logo {
+  height: 90px;
+  margin: -10px;
+}
+
+.header-logo.hidden {
+  display: none;
+}
+
+.banner-logo {
+  width: 300px;
+  margin-left: -50px;
+  margin-top: -80px;
+}
+
+input.email {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.email {
+  font-size: 35px;
+  margin-right: 20px;
+}
+
+.email::placeholder {
+  font-size: 30px;
+}

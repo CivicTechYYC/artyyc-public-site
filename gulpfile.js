@@ -16,6 +16,20 @@ var banner = ['/*!\n',
   ''
 ].join('');
 
+
+gulp.task('build', function() {
+
+  // CSS
+  gulp.src([ './css/**/*' ]).pipe(gulp.dest('./public/css'))
+  gulp.src([ './js/**/*' ]).pipe(gulp.dest('./public/js'))
+  gulp.src([ './vendor/**/*' ]).pipe(gulp.dest('./public/vendor'))
+  gulp.src([ './img/**/*' ]).pipe(gulp.dest('./public/img'))
+  gulp.src([ './index.html' ]).pipe(gulp.dest('./public'))
+  gulp.src([ './device-mockups/device-mockups.min.css' ]).pipe(gulp.dest('./public/device-mockups'))
+  gulp.src([ './device-mockups/iphone_6/iphone_6_port_white.png' ]).pipe(gulp.dest('./public/device-mockups/iphone_6'))
+})
+
+
 // Copy third party libraries from /node_modules into /vendor
 gulp.task('vendor', function() {
 
@@ -108,6 +122,10 @@ gulp.task('js', ['js:minify']);
 
 // Default task
 gulp.task('default', ['css', 'js', 'vendor']);
+
+
+// Default task
+gulp.task('build:production', ['css', 'js', 'vendor', 'build']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
